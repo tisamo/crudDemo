@@ -1,0 +1,63 @@
+<h3>Create</h3>
+<hr>
+
+<form>
+  <div class="form-group">
+    <div class="margin">
+      <label><b>Name</b></label>
+      <input name="name"
+             type="text"
+             class="form-control"
+             placeholder="Name"
+             [(ngModel)]="tree.name">
+    </div>
+    <div class="margin">
+      <label><b>Image</b></label>
+      <input name="image"
+             type="text"
+             class="form-control"
+             placeholder="Please add valid url or it'll use a random image."
+             [(ngModel)]="tree.image">
+    </div>
+    <div class="margin">
+      <label><b>Age</b></label>
+      <input name="age"
+             type="number"
+             class="form-control"
+             placeholder="Age of the Tree"
+             [(ngModel)]="tree.age">
+    </div>
+    <div class="margin">
+      <label><b>Climate</b></label>
+      <select class="form-control" [(ngModel)]="tree.climate" name="climate" id="climate" required>
+        <option *ngFor="let pow of climates" [value]="pow">{{pow}}</option>
+      </select>
+    </div>
+    <div class="margin">
+      <label class="thead-green"><b>Description</b></label>
+      <textarea name="age"
+                cols="20"
+             type="text"
+             class="form-control"
+             placeholder="What do you want to tell about this tree?"
+                [(ngModel)]="tree.description"></textarea>
+    </div>
+
+
+
+
+
+  </div>
+
+  <button type="button"
+          class="btn btn-success"
+  (click)="create()">
+    Create
+  </button>
+
+  <button type="button"
+          class="btn btn-secondary"
+          (click)="back()">
+    Back
+  </button>
+</form>

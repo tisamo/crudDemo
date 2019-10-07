@@ -1,0 +1,44 @@
+<div class="text-center"><h3>Tree database</h3></div>
+<hr>
+<img [src]="image" class="img-fluid  reduce-size" alt="Responsive image" (error)="setRandomPicture()">
+<table class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Name</th>
+    <th scope="col">Age</th>
+    <th scope="col">Climate</th>
+    <th scope="col"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let item of items">
+    <th scope="row">{{item.id}}</th>
+    <td>{{item.name}}</td>
+    <td>{{item.age}}</td>
+    <td>{{item.climate}}</td>
+    <td>
+      <div class="btn-group"
+           role="group">
+        <button type="button"
+                class="btn btn-info"
+                (click)="show(item.id)">
+          Show
+        </button>
+        <button type="button"
+                class="btn btn-info"
+                (click)="edit(item.id)">
+          Edit
+        </button>
+
+        <button type="button"
+                class="btn btn-danger"
+                (click)="delete(item.id)">
+          Delete
+        </button>
+      </div>
+    </td>
+  </tr>
+  </tbody>
+</table>

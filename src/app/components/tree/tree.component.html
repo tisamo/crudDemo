@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-12 title" >
+    <h1>{{tree.name}}</h1>
+  </div>
+</div>
+  <div class="row text-center">
+    <div class="col-12">
+      <img [src]="tree.image" class="img-fluid  reduce-size" alt="Responsive image" (error)="setRandomPicture()">
+    </div>
+  </div>
+<div class="row text-center">
+  <div class="col-3">
+
+  </div>
+  <div class="col-6">
+    <p> {{tree.description}}</p>
+
+    <button type="button" class="btn btn-success" (click)="back()">back</button>
+  </div>
+
+  <div class="col-3">
+
+  </div>
+</div>
+
+
